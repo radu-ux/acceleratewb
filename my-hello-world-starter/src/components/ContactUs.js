@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContactUsAnimation from '../animations/contact_us_animation.json';
 import LottieAnimation from './LottieAnimation';
 
 const ContactUs = () => {
+    const [email, setEmail] = useState('');
+
+    const sendConfirmationEmail = (event) => {
+        event.preventDefault();
+        console.log("Form submitted " + email);
+    };
+
     return (
         <>
             <div>
@@ -27,34 +34,39 @@ const ContactUs = () => {
             </div>
 
             <div className="bg-gradient-to-t from-yellow-500 to-yellow-400 flex flex-col py-5">
-            <p className="text-5xl font-bold self-center mb-8">Ai intrebari? Scrie-ne oricand</p>
-            <div className="flex flex-row"> 
-                <form className="flex flex-col text-xl w-1/2 mx-auto font-bold pt-10 pb-20">
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-bold self-center mb-8">
+                Ai intrebari? Scrie-ne <span className="hidden md:inline-flex">oricand</span>
+            </p>
+            <div className="flex flex-col md:flex-row"> 
+                <form className="flex flex-col text-xl w-1/2 mx-auto font-bold pt-10 pb-20" onSubmit={sendConfirmationEmail}>
                 
-                <label>Email</label>
-                <input className="mb-6" type="email"></input>
-                
-                <label>Nume</label>
-                <input className="mb-6" type="text"></input>
-                
-                <label>Serviciul dorit</label>
-                <select className="mb-6">
-                    <option>Site prezentare</option>
-                    <option>Magazin online</option>
-                    <option>Servicii marketing</option>
-                    <option>Optimizare SEO</option>
-                    <option>Copywriting</option>
-                </select>
+                    <label>Email</label>
+                    <input className="mb-6" type="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                    
+                    <label>Nume</label>
+                    <input className="mb-6" type="text"></input>
+                    
+                    <label>Serviciul dorit</label>
+                    <select className="mb-6">
+                        <option>Site prezentare</option>
+                        <option>Magazin online</option>
+                        <option>Servicii marketing</option>
+                        <option>Optimizare SEO</option>
+                        <option>Copywriting</option>
+                    </select>
 
-                <label>Descrie-ne ideea ta</label>
-                <textarea className="mb-6" type="text" placeholder="Optional"></textarea>
-                
-                <div>
-                    <label>Doresc sa primesc notificari cu oferte</label>
-                    <input className="ml-10" type="checkbox"></input>  
-                </div>
+                    <label>Descrie-ne ideea ta</label>
+                    <textarea className="mb-6" type="text" placeholder="Optional"></textarea>
+                    
+                    <div>
+                        <label>Doresc sa primesc notificari cu oferte</label>
+                        <input className="ml-10" type="checkbox"></input>  
+                    </div>
+
+                    <input type="submit" value="Trimite" className="my-6 py-2 px-8 border-4 border-double rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-black hover:text-white">
+                    </input>
                 </form>
-                <div className="self-center mb-10 mx-auto">
+                <div className="self-center md:mb-44 mx-auto hidden md:flex">
                 <LottieAnimation animation={ContactUsAnimation} width={350} height={350} />
                 </div>
             </div>

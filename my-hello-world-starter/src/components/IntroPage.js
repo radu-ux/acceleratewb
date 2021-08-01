@@ -34,7 +34,7 @@ const IntroPage = () => {
         {/* Services Section */}
         <div className="mt-16 flex flex-col">
           <p className="text-4xl font-semibold self-center capitalize border-b-2 border-yellow-500">Servicii oferite</p>
-          <div className="flex flex-col md:flex-row pt-12 justify-center mx-28"> 
+          <div className="flex flex-col mx-auto mt-10 lg:flex-row lg:justify-center lg:mx-28"> 
             {/* Presentational Site */}
             <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm">
               <img className="w-48 h-48 self-center" src={PresentationalWebsiteLogo}></img>
@@ -45,7 +45,7 @@ const IntroPage = () => {
               </a>
             </div>
             {/* Online Store */}
-            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl mx-10 max-w-sm">
+            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm my-10 lg:mx-10 lg:my-0">
               <img className="w-48 h-48 self-center" src={OnlineStoreLogo}></img>
               <p className="text-3xl font-semibold self-center capitalize">Magazin online</p>
               <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
@@ -62,20 +62,21 @@ const IntroPage = () => {
                 Descopera
               </a>
             </div>
+           
           </div>
           
-          <div data-aos="flip-left" className="flex flex-col md:flex-row justify-center xl:mx-72 pt-12"> 
-            {/* SEO Otimization */}
-            <div className="flex flex-col border-2 border-gray-200 shadow-xl mr-5 max-w-sm">
-              <img className="w-48 h-48 self-center" src={SeoLogo}></img>
-              <p className="text-3xl font-semibold self-center capitalize">Optimizari SEO</p>
-              <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-              <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                Descopera
-              </a>
-            </div>
-            {/* Copywriting */}
-            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl ml-5 max-w-sm">
+          <div className="flex flex-col mx-auto mt-10 lg:flex-row lg:justify-center lg:mx-64">
+              {/* SEO Otimization */}
+              <div data-aos="flip-left"  className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm mb-5 lg:mb-0 lg:mr-5">
+                <img className="w-48 h-48 self-center" src={SeoLogo}></img>
+                <p className="text-3xl font-semibold self-center capitalize">Optimizari SEO</p>
+                <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
+                <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
+                  Descopera
+                </a>
+              </div>
+              {/* Copywriting */}
+              <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm mt-5 lg:mt-0 lg:ml-5">
               <img className="w-48 h-48 self-center" src={CopywritingLogo}></img>
               <p className="text-3xl font-semibold self-center capitalize">Copywriting</p>
               <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
