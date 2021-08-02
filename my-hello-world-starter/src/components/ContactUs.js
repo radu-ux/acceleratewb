@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import ContactUsAnimation from '../animations/contact_us_animation.json';
 import LottieAnimation from './LottieAnimation';
+import emailjs from 'emailjs-com';
 
 const ContactUs = () => {
     const [email, setEmail] = useState('');
 
     const sendConfirmationEmail = (event) => {
         event.preventDefault();
-        console.log("Form submitted " + email);
+        emailjs.sendForm('service_ti62jil', 'template_zcv7z9a', event.target, 'user_VqK1ShbkW7hJe8kHAX2FY')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        event.target.reset()
     };
 
     return (
@@ -41,13 +48,13 @@ const ContactUs = () => {
                 <form className="flex flex-col text-xl w-1/2 mx-auto font-bold pt-10 pb-20" onSubmit={sendConfirmationEmail}>
                 
                     <label>Email</label>
-                    <input className="mb-6" type="email" value={email} onChange={(event) => setEmail(event.target.value)}></input>
+                    <input className="mb-6" type="email" name="email_client" value={email} onChange={(event) => setEmail(event.target.value)}></input>
                     
                     <label>Nume</label>
-                    <input className="mb-6" type="text"></input>
+                    <input className="mb-6" name="nume_client" type="text"></input>
                     
                     <label>Serviciul dorit</label>
-                    <select className="mb-6">
+                    <select className="mb-6" name="serviciu_dorit">
                         <option>Site prezentare</option>
                         <option>Magazin online</option>
                         <option>Servicii marketing</option>
@@ -56,7 +63,7 @@ const ContactUs = () => {
                     </select>
 
                     <label>Descrie-ne ideea ta</label>
-                    <textarea className="mb-6" type="text" placeholder="Optional"></textarea>
+                    <textarea className="mb-6" name="ideea_ta" type="text" placeholder="Optional"></textarea>
                     
                     <div>
                         <label>Doresc sa primesc notificari cu oferte</label>
