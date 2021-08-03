@@ -64,14 +64,20 @@ const IntroPage = () => {
       
 
         {/* Why work with us section */}
-        <div className="mt-16 flex flex-col items-center py-10">
-          <p className="text-4xl font-semibold self-center border-b-2 border-yellow-500">De ce sa lucrezi cu noi ?</p>
+        <div className="mx-4 mt-16 flex flex-col items-center py-10">
+          <p className="text-4xl font-semibold self-center border-b-2 border-yellow-500">
+            <span className="sm:hidden">Lucreaza cu noi</span>
+            <span className="hidden sm:inline">De ce sa lucrezi cu noi? </span>
+          </p>
           {/* Reasons container */}
           <div className="max-w-3xl text-3xl text mt-10 divide-y-4 divide-yellow-500 divide-opacity-50">
-            <div data-aos="fade-left" className="mb-10 px-10 py-10 self-start"><span className="text-yellow-500 text-5xl">1.</span> Oferim expertiza ce iti poate duce afacerea la un alt nivel</div>
-            <div data-aos="fade-right" className="mb-10 px-10 py-10 self-end"><span className="text-yellow-500 text-5xl">2.</span> Asiguram performante inalte ce contribuie la cresterea considerabila a numarului de clienti</div>
-            <div data-aos="fade-left" className="mb-10 px-10 py-10 self-start"><span className="text-yellow-500 text-5xl">3.</span> Dezvoltam in stransa legatura cu clientul pentru a ne asigura ca scopul este atins</div>
-            <div data-aos="fade-right" className="mb-10 px-10 py-10 self-end"><span className="text-yellow-500 text-5xl">4.</span> Flexibili si deschisi spre sugestiile clientului in realizarea produsului final</div>
+            <div data-aos="fade-left" className="mb-10 px-10 py-10 self-start">
+              <span className="text-yellow-500 text-4xl sm:text-5xl">1. </span> 
+              Oferim expertiza ce iti poate duce afacerea la un alt nivel
+            </div>
+            <div data-aos="fade-right" className="mb-10 px-10 py-10 self-end"><span className="text-yellow-500 text-4xl sm:text-5xl">2.</span> Asiguram performante inalte ce contribuie la cresterea considerabila a numarului de clienti</div>
+            <div data-aos="fade-left" className="mb-10 px-10 py-10 self-start"><span className="text-yellow-500 text-4xl sm:text-5xl">3.</span> Dezvoltam in stransa legatura cu clientul pentru a ne asigura ca scopul este atins</div>
+            <div data-aos="fade-right" className="mb-10 px-10 py-10 self-end"><span className="text-yellow-500 text-4xl sm:text-5xl">4.</span> Flexibili si deschisi spre sugestiile clientului in realizarea produsului final</div>
           </div>
         </div>
 

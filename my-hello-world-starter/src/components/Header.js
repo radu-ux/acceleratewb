@@ -72,18 +72,16 @@ const Header = () => {
                 <a className="text-lg mb-2 border-b-2 hover:border-yellow-500" href="#">Servicii</a>
                 <a className="text-lg mb-2 border-b-2 hover:border-yellow-500" href="#">Contact</a>
             </div>
-
-
         </header>
         {/* Hero Image section */}
         <div className="flex flex-col pt-16 md:flex-col lg:flex-row lg:pt-10 lg:justify-between scale-0 bg-gradient-to-b from-yellow-500 to-yellow-400 font-mono" ref={HeroSectionRef}>
           {/* Catching phrase */}
           <div className="flex flex-col my-auto sm:mx-4 md:mx-10 lg:ml-16 xl:ml-28 xl:mb-20 2xl:ml-36 2xl:mt-10 transform transition-all delay-500 duration-500 ease-in-out scale-0" ref={CatchingPhraseRef}>
-            <p className="my-18 uppercase sm:text-4xl md:text-5xl lg:text-5xl lg:mt-16 xl:text-5xl 2xl:text-7xl font-extrabold text-black">
+            <p className="my-18 uppercase text-4xl mx-4 sm:mx-0 sm:text-4xl md:text-5xl lg:text-5xl lg:mt-16 xl:text-5xl 2xl:text-7xl font-extrabold text-black">
               Aici pentru a-ti duce afacerea la un alt nivel
             </p>
-            <p className="sm:text-xl text-2xl font-thin text-black mt-10">Construim websiteuri specifice modelului tau de business</p>
-            <p className="sm:text-xl text-2xl font-thin text-black py-4">Regandim designul siteului tau curent si ii imbunatatim traficul folosind principiile SEO</p>
+            <p className="text-xl mx-4 sm:text-xl sm:mx-0 md:text-2xl font-thin text-black mt-10">Construim websiteuri specifice modelului tau de business</p>
+            <p className="text-xl mx-4 sm:text-xl sm:mx-0 md:text-2xl font-thin text-black py-4">Regandim designul siteului tau curent si ii imbunatatim traficul folosind principiile SEO</p>
             <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-black hover:text-white" href="#">
               Afla mai multe
             </a>
