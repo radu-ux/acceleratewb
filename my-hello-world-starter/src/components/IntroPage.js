@@ -6,6 +6,7 @@ import SeoLogo from '../images/seo.svg';
 import CopywritingLogo from '../images/copywriting.svg';
 import Aos from 'aos';
 import ContactUs from './ContactUs';
+import Card from './Card';
 import { useEffect, useRef, useLayoutEffect } from "react";
 
 const IntroPage = () => {
@@ -36,54 +37,28 @@ const IntroPage = () => {
           <p className="text-4xl font-semibold self-center capitalize border-b-2 border-yellow-500">Servicii oferite</p>
           <div className="flex flex-col mx-auto mt-10 lg:flex-row lg:justify-center lg:mx-28"> 
             {/* Presentational Site */}
-            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm">
-              <img className="w-48 h-48 self-center" src={PresentationalWebsiteLogo}></img>
-              <p className="text-3xl font-semibold self-center capitalize">Site prezentare</p>
-              <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-              <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                Descopera
-              </a>
-            </div>
+            <Card image={PresentationalWebsiteLogo} title="Site Prezentare">
+              Crestem traficul websiteuliui folosind ultimele technologii SEO
+            </Card>
             {/* Online Store */}
-            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm my-10 lg:mx-10 lg:my-0">
-              <img className="w-48 h-48 self-center" src={OnlineStoreLogo}></img>
-              <p className="text-3xl font-semibold self-center capitalize">Magazin online</p>
-              <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-              <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                Descopera
-              </a>
-            </div>
+            <Card image={OnlineStoreLogo} title="Magazin online" classN="my-10 lg:mx-10 lg:my-0">
+              Crestem traficul websiteuliui folosind ultimele technologii SEO
+            </Card>     
             {/* Marketing Services */}
-            <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm">
-            <img className="w-48 h-48 self-center" src={MarketingLogo}></img>
-              <p className="text-3xl font-semibold self-center capitalize">Servicii marketing</p>
-              <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-              <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                Descopera
-              </a>
-            </div>
-           
+            <Card image={MarketingLogo} title="Servicii marketing">
+              Crestem traficul websiteuliui folosind ultimele technologii SEO
+            </Card>
           </div>
           
-          <div className="flex flex-col mx-auto mt-10 lg:flex-row lg:justify-center lg:mx-64">
+          <div className="flex flex-col mx-auto mt-10 lg:flex-row lg:justify-center lg:mx-72">
               {/* SEO Otimization */}
-              <div data-aos="flip-left"  className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm mb-5 lg:mb-0 lg:mr-5">
-                <img className="w-48 h-48 self-center" src={SeoLogo}></img>
-                <p className="text-3xl font-semibold self-center capitalize">Optimizari SEO</p>
-                <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-                <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                  Descopera
-                </a>
-              </div>
+              <Card image={SeoLogo} title="Optimizari SEO" classN="mb-5 lg:mb-0 lg:mr-5">
+                Crestem traficul websiteuliui folosind ultimele technologii SEO
+              </Card>
               {/* Copywriting */}
-              <div data-aos="flip-left" className="flex flex-col border-2 border-gray-200 shadow-xl max-w-sm mt-5 lg:mt-0 lg:ml-5">
-              <img className="w-48 h-48 self-center" src={CopywritingLogo}></img>
-              <p className="text-3xl font-semibold self-center capitalize">Copywriting</p>
-              <p className="pt-10 pb-10 mx-2">Crestem traficul websiteuliui folosind ultimele technologii SEO</p>
-              <a className="my-6 py-2 px-2 border-2 rounded-full border-yellow-500 self-center bg-white transition duration-500 ease-in-out hover:bg-yellow-500 hover:text-white" href="#">
-                Descopera
-              </a>
-            </div>
+              <Card image={CopywritingLogo} title="Copywriting" classN="mt-5 lg:mt-0 lg:ml-5">
+                Crestem traficul websiteuliui folosind ultimele technologii SEO
+              </Card>
           </div>
         </div>
       
