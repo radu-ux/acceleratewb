@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../images/acceleratewb.svg';
+import Logo from '../images/acceleratewb.png';
 
 const Footer = () => {
     return (

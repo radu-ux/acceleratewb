@@ -2,7 +2,8 @@ import React from 'react';
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { useScrollState } from 'scrollmonitor-hooks';
 import HeroImage from '../images/building_websites.svg'; 
-import Logo from '../images/acceleratewb.svg';
+import LogoMobile from '../images/acceleratewb.png';
+import LogoStandard from '../images/acceleratewb.svg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -23,7 +24,7 @@ const Header = () => {
       if(isPhoneNavBaOpen) {
         phoneNavBarRef.current.className = "hidden";
       } else {
-        phoneNavBarRef.current.className = "flex flex-col items-center absolute top-16 py-4 bg-white shadow-lg w-full md:hidden";
+        phoneNavBarRef.current.className = "flex flex-col items-center absolute top-20 py-4 bg-white shadow-lg w-full z-10 fixed md:hidden";
       }
 
       setPhoneNavBaOpen(!isPhoneNavBaOpen);
@@ -37,7 +38,6 @@ const Header = () => {
 
     useLayoutEffect(() => {
         const heroSectionYPos = HeroSectionRef.current.getBoundingClientRect().y;
-        console.log(HeroSectionRef.current.getBoundingClientRect())
         if(heroSectionYPos < 0 ) {
           headerRef.current.className = "flex flex-col md:flex-row justify-between sticky top-0 z-50 bg-white shadow-lg";
           homeRef.current.className = "text-xl mr-8 border-b-2 hover:border-yellow-500 hover:transition duration-300 ease-in border-transparent"; 
@@ -55,9 +55,11 @@ const Header = () => {
 
     return (
         <>
-        <header ref={headerRef}>
+        <header ref={headerRef} className="z-10 fixed w-full">
             {/* Logo image */}
-            <button className="w-36 mx-auto md:ml-10 lg:ml-16 xl:mx-28 2xl:mx-36"><img src={Logo} alt="acceleratewb-logo-image" onClick={handlePhoneMenu}></img></button>
+            <button className="w-36 h-20 md:w-44 md:h-24 mx-auto md:ml-10 lg:ml-16 xl:mx-28 2xl:mx-36">
+              <img src={LogoMobile} alt="acceleratewb-logo-image" onClick={handlePhoneMenu} />
+            </button>
             {/* Navigation links */}
             <div className="flex justify-around items-center hidden md:flex sm:mr-4 md:mr-10 lg:mr-16 xl:mx-28 2xl:mx-36 font-mono">
                 <a href="#" ref={homeRef}>Acasa</a>
