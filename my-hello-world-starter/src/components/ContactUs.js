@@ -41,8 +41,8 @@ const ContactUs = () => {
             </div>
 
             <div className="bg-gradient-to-t from-yellow-500 to-yellow-400 flex flex-col py-5">
-            <p className="text-3xl sm:text-4xl lg:text-5xl font-bold self-center mb-8">
-                Ai intrebari? Scrie-ne <span className="hidden md:inline-flex">oricand</span>
+            <p className="text-3xl sm:text-4xl lg:text-5xl font-bold self-center mb-2 sm:mb-8">
+                Ai intrebari? <span className="block mx-10 sm:inline-flex sm:mx-0"> Scrie-ne </span> <span className="hidden md:inline-flex">oricand</span>
             </p>
             <div className="flex flex-col md:flex-row"> 
                 <form className="flex flex-col text-xl w-1/2 mx-auto font-bold pt-10 pb-20" onSubmit={sendConfirmationEmail}>

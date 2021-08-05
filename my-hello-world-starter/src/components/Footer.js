@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="flex flex-col">
             <div className="flex justify-center flex-col mt-8 md:flex-row md:justify-around md:mx-0 md:py-10 md:mt-0">
-                <img className="w-36 order-2 md:order-none self-center" src={Logo}></img>
+                <img width="130px" height="40px" className="order-2 md:order-none self-center" src={Logo}></img>
                 
                 <div className="flex flex-col self-center mb-2 md:self-start md:mb-0">
                     <p className="uppercase text-yellow-500 font-bold text-opacity-60 mb-4 border-b-2 border-yellow-400">Legaturi</p>

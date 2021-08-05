@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+        .xs-img-sizes { 
+            width: 400px;
+            height: 300px;
+        }
+
+        .sm-md-img-sizes {
+            width: 600px;
+            height: 450px;
+        }
+        
+        .lg-xl-img-sizes { 
+            width: 800px;
+            height: 450px;
+        }
+        .xxl-ing-sizes { 
+            width: 780px;
+            height: 550px;
+        }   
+    }
+}

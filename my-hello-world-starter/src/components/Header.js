@@ -1,9 +1,8 @@
 import React from 'react';
 import { useEffect, useRef, useLayoutEffect, useState } from "react";
 import { useScrollState } from 'scrollmonitor-hooks';
-import HeroImage from '../images/building_websites.svg'; 
+import HeroImage from '../images/building_websites.png'; 
 import LogoMobile from '../images/acceleratewb.png';
-import LogoStandard from '../images/acceleratewb.svg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
@@ -57,8 +56,8 @@ const Header = () => {
         <>
         <header ref={headerRef} className="z-10 fixed w-full">
             {/* Logo image */}
-            <button className="w-36 h-20 md:w-44 md:h-24 mx-auto md:ml-10 lg:ml-16 xl:mx-28 2xl:mx-36">
-              <img src={LogoMobile} alt="acceleratewb-logo-image" onClick={handlePhoneMenu} />
+            <button className="w-36 h-20 mx-auto md:ml-10 lg:ml-16 xl:mx-28 2xl:mx-36" onClick={handlePhoneMenu}>
+              <img width="150px" height="10px" src={LogoMobile} alt="acceleratewb-logo-image"/>
             </button>
             {/* Navigation links */}
             <div className="flex justify-around items-center hidden md:flex sm:mr-4 md:mr-10 lg:mr-16 xl:mx-28 2xl:mx-36 font-mono">
@@ -76,9 +75,9 @@ const Header = () => {
             </div>
         </header>
         {/* Hero Image section */}
-        <div className="flex flex-col pt-16 md:flex-col lg:flex-row lg:pt-10 lg:justify-between scale-0 bg-gradient-to-b from-yellow-500 to-yellow-400 font-mono" ref={HeroSectionRef}>
+        <div className="flex flex-col pt-16 md:flex-col lg:flex-row lg:pt-8 xl:pt-0 lg:justify-between 2xl:pt-18 scale-0 bg-gradient-to-b from-yellow-500 to-yellow-400 font-mono" ref={HeroSectionRef}>
           {/* Catching phrase */}
-          <div className="flex flex-col my-auto sm:mx-4 md:mx-10 lg:ml-16 xl:ml-28 xl:mb-20 2xl:ml-36 2xl:mt-10 transform transition-all delay-500 duration-500 ease-in-out scale-0" ref={CatchingPhraseRef}>
+          <div className="flex flex-col my-auto sm:mx-4 md:mx-10 lg:ml-16 lg:w-4/5 2xl:w-full xl:ml-28 xl:mt-5 2xl:ml-36 2xl:mt-20 transform transition-all delay-500 duration-500 ease-in-out scale-0" ref={CatchingPhraseRef}>
             <p className="my-18 uppercase text-4xl mx-4 sm:mx-0 sm:text-4xl md:text-5xl lg:text-5xl lg:mt-16 xl:text-5xl 2xl:text-7xl font-extrabold text-black">
               Aici pentru a-ti duce afacerea la un alt nivel
             </p>
@@ -89,7 +88,9 @@ const Header = () => {
             </a>
           </div>
           {/* Hero Image */}
-          <img className="sm:w-8/12 lg:w-1/2 lg:mr-10 xl:w-5/12 xl:mb-32 xl:mr-28 2xl:h-1/3 2xl:mr-36 self-center transform transition-all delay-1000 duration-500 ease-in-out scale-0" src={HeroImage} ref={HeroImageRef}></img>
+          <div className="self-center w-full lg:mr-10 xl:mr-28 xl:mt-8 2xl:mb-0 2xl:mt-18">
+            <img className="xs-img-sizes sm:sm-md-img-sizes lg:lg-xl-2xl-img-sizes xl:lg-xl-2xl-img-sizes 2xl:xxl-ing-sizes mx-auto transform transition-all delay-1000 duration-500 ease-in-out scale-0" src={HeroImage} ref={HeroImageRef}></img>
+          </div>
         </div>
         </>
     );

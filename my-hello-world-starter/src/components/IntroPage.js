@@ -11,7 +11,7 @@ import { useEffect, useRef, useLayoutEffect } from "react";
 
 const IntroPage = () => {
     useEffect(() => {
-      Aos.init({duration: 800});
+      Aos.init({duration: 800, disable: "mobile"});
     })
 
     return (
