@@ -45,7 +45,7 @@ const ContactUs = () => {
                 Ai intrebari? <span className="block mx-10 sm:inline-flex sm:mx-0"> Scrie-ne </span> <span className="hidden md:inline-flex">oricand</span>
             </p>
             <div className="flex flex-col md:flex-row"> 
-                <form className="flex flex-col text-xl w-1/2 mx-auto font-bold pt-10 pb-20" onSubmit={sendConfirmationEmail}>
+                <form className="flex flex-col text-xl w-5/6 sm:w-1/2 mx-auto font-bold pt-10 pb-20" onSubmit={sendConfirmationEmail}>
                 
                     <label>Email</label>
                     <input className="mb-6" type="email" name="email_client" value={email} onChange={(event) => setEmail(event.target.value)}></input>

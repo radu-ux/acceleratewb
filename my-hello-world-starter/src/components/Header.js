@@ -89,7 +89,7 @@ const Header = () => {
           </div>
           {/* Hero Image */}
           <div className="self-center w-full lg:mr-10 xl:mr-28 xl:mt-8 2xl:mb-0 2xl:mt-18">
-            <img className="xs-img-sizes sm:sm-md-img-sizes lg:lg-xl-2xl-img-sizes xl:lg-xl-2xl-img-sizes 2xl:xxl-ing-sizes mx-auto transform transition-all delay-1000 duration-500 ease-in-out scale-0" src={HeroImage} ref={HeroImageRef}></img>
+            <img width="600px" height="400px" className="xs-img-sizes sm:sm-md-img-sizes lg:lg-xl-2xl-img-sizes xl:lg-xl-2xl-img-sizes 2xl:xxl-ing-sizes mx-auto transform transition-all delay-1000 duration-500 ease-in-out scale-0" src={HeroImage} ref={HeroImageRef}></img>
           </div>
         </div>
         </>
