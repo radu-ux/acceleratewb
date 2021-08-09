@@ -1,5 +1,5 @@
 import React from 'react'
-import DiagramImg from '../images/image16-min.png';
+import DiagramImg from '../images/diagrams.jpg';
 import styled from 'styled-components';
 
 const HeroSectionBgImageStyle = {
