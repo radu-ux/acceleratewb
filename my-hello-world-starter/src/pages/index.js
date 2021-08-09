@@ -1,6 +1,6 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import Intro from "../components/Intro";
+import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
 import './tailwind.css';
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="App">
       <Navigation />
-      <Intro />
+      <HeroSection />
       <Services />
     </div>
   )

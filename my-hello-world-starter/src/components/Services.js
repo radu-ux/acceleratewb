@@ -1,5 +1,11 @@
 import React from 'react'
 
+const BlueMobileIcon = () => {
+    return (
+        <></>
+    );
+}
+
 const Services = ()  =>{
     return (
         <section className="flex flex-col mt-20">
@@ -14,6 +20,8 @@ const Services = ()  =>{
                     <p>Construim siteuri de prezentare pentru businessul</p>
                 </div>
             </div>
+
+
             <div className="flex flex-row justify-center mt-3 mb-10">
                 <div className="border-2 shadow-lg py-5 px-5 mr-3 max-w-xl">
                     <h3 className="text-2xl font-semibold">Site Prezentare</h3>
@@ -24,6 +32,8 @@ const Services = ()  =>{
                     <p>Construim siteuri de prezentare pentru businessul</p>
                 </div>
             </div>
+
+
         </section>
     )
 }
