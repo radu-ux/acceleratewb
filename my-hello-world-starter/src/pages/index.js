@@ -1,12 +1,15 @@
 import React from "react";
-import Layout from "../components/Layout";
-import IntroPage from "../components/IntroPage";
+import Navigation from "../components/Navigation";
+import Intro from "../components/Intro";
+import Services from "../components/Services";
 import './tailwind.css';
 
 export default function Home() {
   return (
-    <Layout>
-      <IntroPage />
-    </Layout>
+    <div className="App">
+      <Navigation />
+      <Intro />
+      <Services />
+    </div>
   )
 } 

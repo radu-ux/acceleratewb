@@ -1,0 +1,5 @@
+#hero-section::before {
+    background: url("../images/diagrams.jpg") no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.7;
+}
