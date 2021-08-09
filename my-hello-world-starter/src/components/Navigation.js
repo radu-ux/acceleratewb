@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import LogoImage from '../images/acceleratewb.svg';
+import LogoImage from '../images/acceleratewb.png';
 
 const NavButton = ({text, _ref, _class}) => {
     return (
@@ -50,6 +50,7 @@ const MenuLinks = styled.div`
     right: 0;
     position: absolute;
     background: white;
+    
     transition: opacity 300ms;
     opacity: ${({menuOpen}) => (menuOpen ? "1" : "0")};
     visibility: ${({menuOpen}) => (menuOpen ? "visible" : "hidden")};
@@ -82,15 +83,17 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     @media (min-width: 300px) {
-        width: 100px;
+        width: 150px;
         height: 60px;
     }
 
     @media (min-width: 768px) {
-        width: 200px;
-        height: 80px;
+        width: 170px;
+        height: 65px;
     }
 `;
 
@@ -98,15 +101,15 @@ const Navigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-white flex flex-row justify-between shadow-lg w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
-            <Logo src={LogoImage} />
+        <header className="sticky top-0 z-50 bg-white flex flex-row justify-between shadow-xl w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
+            <Logo src={LogoImage}/>
             <Wrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>
                     <div />
                     <div />
                     <div />
                 </BurgerMenuIcon>
-                <MenuLinks menuOpen={open} >
+                <MenuLinks menuOpen={open} className="shadow-xl">
                     <NavButton text="Acasa" _ref="#" />
                     <NavButton text="Despre Noi" _ref="#"/>
                     <NavButton text="Servicii" _ref="#"/>

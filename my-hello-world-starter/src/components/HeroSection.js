@@ -26,16 +26,16 @@ const HeroSectionParent = styled.section`
     }
 
     @media (min-width: 768px) {
-        height: 530px;
+        height: 535px;
         &:after {
-            height: 530px;
+            height: 535px;
         }
     }
 
     @media (min-width: 1024px) {
-        height: 545px;
+        height: 550px;
         &:after {
-            height: 545px;
+            height: 550px;
         }
     }
 
