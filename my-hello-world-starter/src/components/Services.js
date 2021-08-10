@@ -4,6 +4,7 @@ import {MdPhoneIphone} from 'react-icons/md';
 import {IconContext} from "react-icons";
 import {GiAutomaticSas} from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
+import H2 from './common/SharedComponents';
 import styled from "styled-components";
 
 const colors = require('tailwindcss/colors')
@@ -55,7 +56,7 @@ const WebHostingIcon = () => {
 const Services = ()  =>{
     return (
         <section className="flex flex-col mt-20">
-            <h2 className="font-bold text-4xl self-center">Servicii</h2>
+            <H2>Servicii</H2>
             <div className="flex flex-row justify-center mt-10 mb-3">
                 <div className="flex flex-rox border-2 shadow-lg py-5 px-5 mr-3 max-w-xl">
                     <div className="mt-2">
