@@ -33,9 +33,9 @@ const HeroSectionParent = styled.section`
     }
 
     @media (min-width: 1024px) {
-        height: 550px;
+        height: 560px;
         &:after {
-            height: 550px;
+            height: 560px;
         }
     }
 

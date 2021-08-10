@@ -54,6 +54,18 @@ const MenuLinks = styled.div`
     transition: opacity 300ms;
     opacity: ${({menuOpen}) => (menuOpen ? "1" : "0")};
     visibility: ${({menuOpen}) => (menuOpen ? "visible" : "hidden")};
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        background: transparent;
+        height: inherit;
+        top: 0;
+
+    }
 `;
 
 const Wrapper = styled.div`
@@ -63,21 +75,11 @@ const Wrapper = styled.div`
         #burger-menu {
             visibility: visible;
         }
-
-        #default-menu {
-            visibility: hidden;
-            position: absolute;
-        }
     }
 
     @media (min-width: 768px) {
         #burger-menu {
             visibility: hidden;
-        }
-
-        #default-menu {
-            visibility: visible;
-            position: relative;
         }
     }
 `;
@@ -85,6 +87,8 @@ const Wrapper = styled.div`
 const Logo = styled.img`
     padding-top: 1rem;
     padding-bottom: 1rem;
+    width: 170px;
+    height: 65px;
 
     @media (min-width: 300px) {
         width: 150px;
@@ -102,25 +106,19 @@ const Navigation = () => {
 
     return (
         <header className="sticky top-0 z-50 bg-white flex flex-row justify-between shadow-xl w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
-            <Logo src={LogoImage}/>
+            <Logo src={LogoImage} alt="acceleratewb-logo-image"/>
             <Wrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>
                     <div />
                     <div />
                     <div />
                 </BurgerMenuIcon>
-                <MenuLinks menuOpen={open} className="shadow-xl">
+                <MenuLinks menuOpen={open} className="shadow-xl md:shadow-none">
                     <NavButton text="Acasa" _ref="#" />
-                    <NavButton text="Despre Noi" _ref="#"/>
-                    <NavButton text="Servicii" _ref="#"/>
+                    <NavButton text="Despre Noi" _ref="#" _class="sm:mx-0 md:mx-8"/>
+                    <NavButton text="Servicii" _ref="#" _class="sm:mr-0 md:mr-8"/>
                     <NavButton text="Contact" _ref="#" />
                 </MenuLinks>
-                <nav id="default-menu" className="flex flex-row self-center">
-                    <NavButton text="Acasa" _ref="#" />
-                    <NavButton text="Despre Noi" _ref="#" _class="mx-8"/>
-                    <NavButton text="Servicii" _ref="#" _class="mr-8"/>
-                    <NavButton text="Contact" _ref="#" />
-                </nav>
             </Wrapper>
         </header>
     )

@@ -1,10 +1,18 @@
-import React from 'react'
-import {MdWeb} from 'react-icons/md'
-import {MdPhoneIphone} from 'react-icons/md'
-import {IconContext} from "react-icons"
-import {GiAutomaticSas} from "react-icons/gi"
-import {CgGhost} from "react-icons/cg"
+import React from 'react';
+import {MdWeb} from 'react-icons/md';
+import {MdPhoneIphone} from 'react-icons/md';
+import {IconContext} from "react-icons";
+import {GiAutomaticSas} from "react-icons/gi";
+import { GrHostMaintenance } from "react-icons/gr";
+import styled from "styled-components";
+
 const colors = require('tailwindcss/colors')
+
+const WebHostingIconWrapper = styled.div`
+    .gr-icon path {
+        stroke: ${({iconColor}) => iconColor};
+    }
+`;
 
 const PresentationSiteIcon = () => {
     return (
@@ -38,11 +46,9 @@ const SoftwareAutomationIcon = () => {
 
 const WebHostingIcon = () => {
     return (
-        <IconContext.Provider value={{ color: colors.blue[400], size: '40px' }}>
-            <div>
-                <CgGhost />
-            </div>  
-        </IconContext.Provider>
+        <WebHostingIconWrapper iconColor={colors.blue[400]}>
+            <GrHostMaintenance size="40px" className="gr-icon" />
+        </WebHostingIconWrapper>  
     );
 }
 
