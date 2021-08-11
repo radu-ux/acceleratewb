@@ -1,4 +1,5 @@
 import React from 'react'
+import HeroImage1350 from '../images/hero-img-1350.jpg';
 import HeroImage1200 from '../images/hero-img-1200.jpg';
 import HeroImage800 from '../images/hero-img-800.jpg';
 import HeroImage400 from '../images/hero-img-400.jpg';
@@ -73,11 +74,11 @@ const HeroSectionParent = styled.section`
     }
 
     @media (min-width: 1301px) {
-        height: 750px;
+        height: 930px;
         &:after {
-            background: url(${HeroImage1200}) no-repeat center center fixed;
+            background: url(${HeroImage1350}) no-repeat center center fixed;
             background-size: cover;
-            height: 750px;
+            height: 930px;
         }
     }
 
@@ -100,7 +101,7 @@ const HeroButton = () => {
 const HeroSection = () => {
     return (
         <HeroSectionParent className="flex flex-row">
-            <HeroSectionChild className="flex flex-col mx-auto py-36 md:py-44 lg:py-36 xl:py-40 2xl:py-52">
+            <HeroSectionChild className="flex flex-col mx-auto py-36 md:py-44 lg:py-36 xl:py-40 2xl:py-72">
                 <h1 className="font-bold text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
                     Dezvoltam Solutii Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
                 </h1>
