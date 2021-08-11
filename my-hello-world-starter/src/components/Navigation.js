@@ -106,7 +106,7 @@ const Navigation = () => {
 
     return (
         <header className="sticky top-0 z-50 bg-white flex flex-row justify-between shadow-xl w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
-            <Logo src={LogoImage} alt="acceleratewb-logo-image"/>
+            <Logo width="170" height="65" src={LogoImage} alt="acceleratewb-logo-image"/>
             <Wrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>
                     <div />

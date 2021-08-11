@@ -57,8 +57,8 @@ const Services = ()  =>{
     return (
         <section className="flex flex-col mt-20">
             <H2>Servicii</H2>
-            <div className="flex flex-row justify-center mt-10 mb-3">
-                <div className="flex flex-rox border-2 shadow-lg py-5 px-5 mr-3 max-w-xl">
+            <div className="flex flex-col md:flex-row justify-center mt-10 mb-3 mx-8 md:mx-0">
+                <div className="flex flex-rox border-2 shadow-lg py-5 px-5 mb-8 md:mb-0 md:mr-3 max-w-xl">
                     <div className="mt-2">
                         <PresentationSiteIcon/>
                     </div>
@@ -67,7 +67,7 @@ const Services = ()  =>{
                         <p>Construim siteuri de prezentare pentru businessul</p>
                     </div>
                 </div>
-                <div className="flex flex-row border-2 shadow-lg py-5 px-5 ml-3 max-w-xl">
+                <div className="flex flex-row border-2 shadow-lg py-5 px-5 md:ml-3 max-w-xl">
                     <div className="mt-2">
                         <ProgressiveWebAppIcon/>
                     </div>
@@ -79,8 +79,8 @@ const Services = ()  =>{
             </div>
 
 
-            <div className="flex flex-row justify-center mt-3 mb-10">
-                <div className="flex flex-rox border-2 shadow-lg py-5 px-5 mr-3 max-w-xl">
+            <div className="flex flex-col md:flex-row justify-center mt-3 mb-10 mx-8 md:mx-0">
+                <div className="flex flex-rox border-2 shadow-lg py-5 px-5 mb-8 md:mb-0 md:mr-3 max-w-xl">
                     <div className="mt-2">
                         <SoftwareAutomationIcon/>
                     </div>
@@ -89,7 +89,7 @@ const Services = ()  =>{
                         <p>Construim siteuri de prezentare pentru businessul</p>
                     </div>
                 </div>
-                <div className="flex flex-row border-2 shadow-lg py-5 px-5 ml-3 max-w-xl">
+                <div className="flex flex-row border-2 shadow-lg py-5 px-5 md:ml-3 max-w-xl">
                     <div className="mt-2">
                         <WebHostingIcon/>
                     </div>
