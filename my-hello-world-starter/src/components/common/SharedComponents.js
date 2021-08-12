@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useEffect} from "react";
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
-const H2 = (props) => {
+export const H2 = ({animationType, animationDuration, children}) => {
+    useEffect(() => {
+        AOS.init()
+    }, []);
+
     return (
-        <p className="font-bold text-5xl self-center border-b-2 border-yellow-500">{props.children}</p>
+        <div data-aos={animationType} data-aos-duration={animationDuration} className="flex justify-center">
+            <p className="font-bold text-4xl self-center">{children}</p>
+        </div>
     )
 }
 
-export default H2;
+export const Card = ({cardTitle, _class, children}) => {
+    return (
+        <div className={`common attributes ${_class}`}>
+        </div>
+    );
+}

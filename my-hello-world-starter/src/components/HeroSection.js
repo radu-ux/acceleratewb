@@ -43,7 +43,7 @@ const HeroSectionParent = styled.section`
     @media screen 
     and (min-width: 768px)
     and (max-width: 1024px) {
-        height: 500px;
+        height: 50î0px;
         &:after {
             background: url(${HeroImage1200}) no-repeat center center fixed;
             background-size: cover;
@@ -65,11 +65,11 @@ const HeroSectionParent = styled.section`
     @media screen 
     and (min-width: 1201px)
     and (max-width: 1300px) {
-        height: 550px;
+        height: 560px;
         &:after {
             background: url(${HeroImage1200}) no-repeat center center fixed;
             background-size: cover;
-            height: 550px;
+            height: 560px;
         }
     }
 
