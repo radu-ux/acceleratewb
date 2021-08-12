@@ -21,21 +21,17 @@ const Wrapper = styled.div`
 `;
 
 const CompanyDescription = () => {
-    useEffect(() => {
-        AOS.init({duration: 2000});
-    })
-
     return (
         <section className="flex flex-col mt-20">
-            <H2>Cine suntem ?</H2>
             <div className="flex flex-col md:flex-row justify-center my-10">
-                <div data-aos="flip-left" className="flex flex-col self-center">
-                    <p className="sm:text-2xl 2xl:text-3xl mx-5 sm:max-w-xl 2xl:max-w-2xl">
+                <div className="flex flex-col self-center">
+                    <H2>Cine suntem ?</H2>
+                    <p className="sm:text-2xl 2xl:text-3xl mx-5 mt-10 sm:max-w-xl 2xl:max-w-2xl">
                         Suntem o companie ce ne ocupam cu dezvoltarea de solutii web pentru afacerea ta.
                         Dispunem de o echipa flexibila, capabila de a-ti ajuta compania sa-si creasca 
                         veniturile prin intermediul onlineului.
                     </p>
-                    <button className="text-lg bg-yellow-500 py-2 w-40 mt-5 mx-auto rounded-full text-white border-2 ring ring-yellow-500 shadow-lg hover:bg-yellow-400">Cere oferta</button>
+                    <button className="text-lg bg-yellow-500 py-2 w-40 mt-5 mx-auto rounded-full text-white border-2 ring ring-yellow-500 shadow-lg hover:bg-yellow-400 ">Cere oferta</button>
                 </div>
                 <Wrapper className="self-center mt-8 md:mt-0">
                    <img width="500"
