@@ -36,19 +36,22 @@ const CompanyDescription = () => {
     }, []);
 
     return (
-        <StyledSection className="flex flex-col pt-20">
+        <section className="flex flex-col mt-20">
             <div className="flex flex-col md:flex-row justify-center my-10">
-                <div className="flex flex-col self-center 2xl:mr-12">
+                <div className="flex flex-col self-center mb-32 2xl:mr-12">
                     <p className="mx-auto my-5 text-xl text-blue-500 font-bold tracking-widest">
                         Politica companiei
                     </p>
-                    <H2 animationType="fade-right" animationDuration="1000">Cine suntem ?</H2>
-                    <p className="leading-10 text-xl mx-5 mt-5 sm:max-w-xl 2xl:max-w-2xl">
+                    <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Cine suntem ?</H2>
+                    <p className="leading-10 text-xl text-gray-500 mx-5 mt-5 sm:max-w-xl 2xl:max-w-2xl">
                         Suntem o companie care se ocupă cu dezvoltarea de soluții web pentru afacerea ta.
                         Dispunem de o echipă flexibilă, capabilă de a-ți ajuta compania să-și crească 
                         veniturile prin intermediul online-ului.
                     </p>
-                    <button className="text-lg bg-yellow-500 py-2 w-40 mt-8 mx-auto rounded-full text-white border-2 ring ring-yellow-500 shadow-lg hover:bg-yellow-400">Cere oferta</button>
+                    <div className="flex flex-col mt-5 md:flex-row">
+                        <button className="text-lg bg-yellow-500 py-2 w-40 mt-8 text-white border-2 ring ring-yellow-500 shadow-lg mx-auto hover:bg-yellow-400 md:ml-5 md:mx-0">Cere oferta</button>
+                        <p className="self-center mt-8 ml-0 text-xs text-red-500 font-bold md:ml-8">SAU INTREABA ORICE LA <span className="block text-center text-lg">0765.654.343</span></p>
+                    </div>
                 </div>
                 <Wrapper data-aos="zoom-in" className="self-center mt-8 md:mt-0">
                    <img width="500"
@@ -62,7 +65,7 @@ const CompanyDescription = () => {
                 </img>
                 </Wrapper>  
             </div>
-        </StyledSection>
+        </section>
     )
 }
 

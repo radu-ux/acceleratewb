@@ -2,8 +2,9 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
-import './tailwind.css';
 import CompanyDescription from "../components/CompanyDescription";
+import Footer from "../components/Footer";
+import './tailwind.css';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroSection />
       <CompanyDescription />
       <Services />
+      <Footer />
     </div>
   )
 } 

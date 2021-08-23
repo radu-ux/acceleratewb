@@ -2,13 +2,13 @@ import React, {useEffect, useRef} from "react";
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
-export const H2 = ({animationType, animationDuration, children}) => {
+export const H2 = ({animationType, animationDuration, isCentered, children}) => {
     useEffect(() => {
         AOS.init()
     }, []);
 
     return (
-        <div data-aos={animationType} data-aos-duration={animationDuration} className="flex justify-center">
+        <div data-aos={animationType} data-aos-duration={animationDuration} className={`flex ${isCentered ? "justify-center": "ml-5"}`}>
             <p className="font-bold text-4xl self-center">{children}</p>
         </div>
     )

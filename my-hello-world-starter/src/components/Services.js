@@ -70,11 +70,11 @@ const Services = ()  =>{
     })
 
     return (
-        <section className="flex flex-col">
+        <section className="flex flex-col mt-12 2xl:mt-20">
             <p className="mx-auto my-5 text-xl text-blue-500 font-bold tracking-widest">
                 Aria de activitate în domeniul software
             </p>
-            <H2 animationType="fade-right" animationDuration="1000">Servicii</H2>
+            <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Servicii</H2>
             <div className="flex flex-col md:flex-row justify-center mt-10 mb-3 mx-8 md:mx-0">
                 <Card cardImage={PresentationSiteIcon} cardEffect="zoom-in" cardTitle="Site Prezentare & Magazine Online" _class="mb-8 md:mb-0 md:mr-3">
                     Identitatea brand-ului tău este extrem de importantă. Noi înțelegem acest lucru și te vom ajuta
