@@ -38,8 +38,8 @@ const CompanyDescription = () => {
     return (
         <section className="flex flex-col mt-20">
             <div className="flex flex-col md:flex-row justify-center my-10">
-                <div className="flex flex-col self-center mb-32 2xl:mr-12">
-                    <p className="mx-auto my-5 text-xl text-blue-500 font-bold tracking-widest">
+                <div className="flex flex-col self-center mb-12 md:mb-32 2xl:mr-12">
+                    <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
                         Politica companiei
                     </p>
                     <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Cine suntem ?</H2>
@@ -53,7 +53,7 @@ const CompanyDescription = () => {
                         <p className="self-center mt-8 ml-0 text-xs text-red-500 font-bold md:ml-8">SAU INTREABA ORICE LA <span className="block text-center text-lg">0765.654.343</span></p>
                     </div>
                 </div>
-                <Wrapper data-aos="zoom-in" className="self-center mt-8 md:mt-0">
+                <Wrapper data-aos="zoom-in" className="self-center mx-5 sm:mx-0">
                    <img width="500"
                         height="500"
                         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/cat-500.jpg"

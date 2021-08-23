@@ -59,7 +59,7 @@ const Footer = () => {
                         </div>
                 </div>
             <div className="mx-auto mt-5 text-white"> 
-                <p>Copyright @ 2021. toate drepturile rezervate</p>
+                <p>Copyright @ 2021. Toate drepturile rezervate</p>
             </div>
         </StyledSection>
     )

@@ -71,7 +71,7 @@ const Services = ()  =>{
 
     return (
         <section className="flex flex-col mt-12 2xl:mt-20">
-            <p className="mx-auto my-5 text-xl text-blue-500 font-bold tracking-widest">
+            <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
                 Aria de activitate în domeniul software
             </p>
             <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Servicii</H2>
