@@ -37,9 +37,9 @@ const CompanyDescription = () => {
                     </p>
                     <H2 animationType="fade-right" animationDuration="1000">Cine suntem ?</H2>
                     <p className="leading-10 text-2xl mx-5 mt-5 sm:max-w-xl 2xl:max-w-2xl">
-                        Suntem o companie ce se ocupa cu dezvoltarea de solutii web pentru afacerea ta.
-                        Dispunem de o echipa flexibila, capabila de a-ti ajuta compania sa-si creasca 
-                        veniturile prin intermediul onlineului.
+                        Suntem o companie care se ocupă cu dezvoltarea de soluții web pentru afacerea ta.
+                        Dispunem de o echipă flexibilă, capabilă de a-ți ajuta compania să-și crească 
+                        veniturile prin intermediul online-ului.
                     </p>
                     <div className="w-28 h-1 bg-blue-300 my-4 mx-4"></div>
                     <button className="text-lg bg-yellow-500 py-2 w-40 mt-8 mx-auto rounded-full text-white border-2 ring ring-yellow-500 shadow-lg hover:bg-yellow-400">Cere oferta</button>

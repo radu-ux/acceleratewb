@@ -114,7 +114,7 @@ const Navigation = () => {
                     <div />
                 </BurgerMenuIcon>
                 <MenuLinks menuOpen={open} className="shadow-xl md:shadow-none">
-                    <NavButton text="Acasa" _ref="#" />
+                    <NavButton text="Acasă" _ref="#" />
                     <NavButton text="Despre Noi" _ref="#" _class="sm:mx-0 md:mx-8"/>
                     <NavButton text="Servicii" _ref="#" _class="sm:mr-0 md:mr-8"/>
                     <NavButton text="Contact" _ref="#" />

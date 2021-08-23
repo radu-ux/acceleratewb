@@ -93,7 +93,7 @@ const HeroSectionChild = styled.div`
 
 const HeroButton = () => {
     return (
-        <button className="text-lg bg-blue-500 px-5 rounded-full text-white mr-10 shadow-lg hover:bg-blue-700">Contacteaza-ne</button>
+        <button className="text-lg bg-blue-500 px-5 rounded-full text-white mr-10 shadow-lg hover:bg-blue-700">Contactează-ne</button>
     );
 }
 
@@ -103,13 +103,13 @@ const HeroSection = () => {
         <HeroSectionParent className="flex flex-row">
             <HeroSectionChild className="flex flex-col mx-auto py-36 md:py-44 lg:py-36 xl:py-40 2xl:py-72">
                 <h1 className="font-bold text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
-                    Dezvoltam Solutii Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
+                    Dezvoltăm Soluții Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
                 </h1>
                 <div className="flex flex-row mx-auto mt-10">
                     <HeroButton />
                     <div>
                         <p className="text-yellow-500 font-bold xl:text-xl 2xl:text-2xl ">0765.623.233</p>
-                        <p className="text-lg text-white ">Info & Intrebari </p>
+                        <p className="text-lg text-white ">Info & Întrebări </p>
                     </div>
                 </div>
             </HeroSectionChild>
