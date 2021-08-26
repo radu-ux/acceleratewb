@@ -2,10 +2,14 @@ import React, { useEffect } from 'react'
 import { H2 } from '../components/common/SharedComponents';
 import TeamWorkImg500 from '../images/team-work-cropped-500.png';
 import TeamWorkImg1000 from '../images/team-work-cropped-1000_v1.png';
+import {IconContext} from "react-icons";
 import Bubble from '../images/blob-haikei.svg'
 import styled from 'styled-components';
 import AOS from 'aos'
+import { GrPhone } from "react-icons/gr";
 import "aos/dist/aos.css";
+
+const colors = require('tailwindcss/colors')
 
 const Wrapper = styled.div`   
     img {
@@ -21,6 +25,20 @@ const Wrapper = styled.div`
         }
     }
 `;
+
+const PhoneIconWrapper = styled.div`
+    .gr-icon path {
+        stroke: ${({iconColor}) => iconColor};
+    }
+`;
+
+const PhoneIcon = () => {
+    return (
+        <PhoneIconWrapper iconColor={colors.red[500]}>
+            <GrPhone size="30px" className="gr-icon mt-2"/>
+        </PhoneIconWrapper>  
+    );
+}
 
 const StyledSection = styled.section`
         background: url(${Bubble}) center ;
@@ -50,7 +68,10 @@ const CompanyDescription = () => {
                     </p>
                     <div className="flex flex-col mt-5 md:flex-row">
                         <button className="text-lg bg-yellow-500 py-2 w-40 mt-8 text-white border-2 ring ring-yellow-500 shadow-lg mx-auto hover:bg-yellow-400 md:ml-5 md:mx-0">Cere oferta</button>
-                        <p className="self-center mt-8 ml-0 text-xs text-red-500 font-bold md:ml-8">SAU INTREABA ORICE LA <span className="block text-center text-lg">0765.654.343</span></p>
+                        <div className="flex flex-row mt-9 md:ml-8 self-center">
+                            <PhoneIcon/>
+                            <p className="ml-0 text-xs text-red-500 font-bold">SAU INTREABA ORICE LA <span className="block text-center text-lg">0765.654.343</span></p>
+                        </div>
                     </div>
                 </div>
                 <Wrapper data-aos="zoom-in" className="self-center mx-5 sm:mx-0">
