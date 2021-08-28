@@ -100,16 +100,16 @@ const HeroButton = () => {
 
 const HeroSection = () => {
     return (
-        <HeroSectionParent className="flex flex-row">
+        <HeroSectionParent className="flex flex-row mt-14">
             <HeroSectionChild className="flex flex-col mx-auto py-36 md:py-44 lg:py-36 xl:py-40 2xl:py-72">
-                <h1 className="font-bold text-center text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
-                    Dezvoltăm Soluții Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
+                <h1 className="font-custom font-bold text-center text-white tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
+                    Dezvoltam Solutii Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
                 </h1>
                 <div className="flex flex-row mx-auto mt-10">
                     <HeroButton />
                     <div>
                         <p className="text-yellow-500 font-bold xl:text-xl 2xl:text-2xl ">0765.623.233</p>
-                        <p className="text-lg text-white ">Info & Întrebări </p>
+                        <p className="text-lg text-white ">Info & Intrebări </p>
                     </div>
                 </div>
             </HeroSectionChild>

@@ -2,12 +2,9 @@ import React, { useEffect } from 'react'
 import { H2 } from '../components/common/SharedComponents';
 import TeamWorkImg500 from '../images/team-work-cropped-500.png';
 import TeamWorkImg1000 from '../images/team-work-cropped-1000_v1.png';
-import {IconContext} from "react-icons";
-import Bubble from '../images/blob-haikei.svg'
 import styled from 'styled-components';
-import AOS from 'aos'
 import { GrPhone } from "react-icons/gr";
-import "aos/dist/aos.css";
+import AOS from 'aos'
 
 const colors = require('tailwindcss/colors')
 
@@ -40,12 +37,6 @@ const PhoneIcon = () => {
     );
 }
 
-const StyledSection = styled.section`
-        background: url(${Bubble}) center ;
-        background-size: cover;
-        background-repeat: no-repeat;
-`;
-
 const CompanyDescription = () => {
     useEffect(() => {
         AOS.init({
@@ -77,13 +68,12 @@ const CompanyDescription = () => {
                 <Wrapper data-aos="zoom-in" className="self-center mx-5 sm:mx-0">
                    <img width="500"
                         height="500"
-                        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/cat-500.jpg"
+                        src={TeamWorkImg500}
                         srcset={
                                 `${TeamWorkImg500} 500w,
                                  ${TeamWorkImg1000} 1000w`
                                }
-                        sizes="(min-width: 600px) 50vw, 100vw" >        
-                </img>
+                        sizes="(min-width: 600px) 50vw, 100vw" />        
                 </Wrapper>  
             </div>
         </section>

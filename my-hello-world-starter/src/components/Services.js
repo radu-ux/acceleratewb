@@ -5,9 +5,8 @@ import {IconContext} from "react-icons";
 import {GiDigitalTrace} from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
 import { H2, Card } from './common/SharedComponents';
-import Bubble from '../images/blob-haikei-top-left.svg';
-import AOS from 'aos';
 import styled from "styled-components";
+import AOS from 'aos';
 
 const colors = require('tailwindcss/colors')
 
@@ -16,13 +15,6 @@ const WebHostingIconWrapper = styled.div`
         stroke: ${({iconColor}) => iconColor};
     }
 `;
-
-const StyledSection = styled.section`
-        background: url(${Bubble}) center ;
-        background-size: cover;
-        background-repeat: no-repeat;
-`;
-
 
 const PresentationSiteIcon = () => {
     return (
@@ -74,7 +66,7 @@ const Services = ()  =>{
             <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
                 Aria de activitate în domeniul software
             </p>
-            <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Servicii</H2>
+            <H2 animationType="fade-left" animationDuration="1000" isCentered={true}>Servicii</H2>
             <div className="flex flex-col justify-center mt-10 mb-3 mx-8 lg:flex-row lg:mx-0">
                 <Card cardImage={PresentationSiteIcon} cardEffect="zoom-in" cardTitle="Site Prezentare & Magazine Online" _class="mb-8 lg:mb-0 lg:mr-3">
                     Identitatea brand-ului tău este extrem de importantă. Noi înțelegem acest lucru și te vom ajuta
