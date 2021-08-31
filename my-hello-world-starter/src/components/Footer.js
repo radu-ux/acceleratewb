@@ -1,25 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LogoImage from '../images/acceleratewb.png';
+import Logo from '../components/Logo';
 import Bubble from '../images/footer.svg';
 import { FooterLink } from './common/SharedComponents';
-
-const Logo = styled.img`
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 170px;
-    height: 65px;
-
-    @media (min-width: 300px) {
-        width: 150px;
-        height: 60px;
-    }
-
-    @media (min-width: 768px) {
-        width: 170px;
-        height: 65px;
-    }
-`;
 
 const StyledFooter = styled.footer`
         background: url(${Bubble}) center ;
@@ -48,7 +31,7 @@ const Footer = () => {
         <StyledFooter className="flex flex-col mt-32 p-5">
             <div className="flex flex-col border-b pb-10 text-white lg:flex-row justify-around lg:mx-auto">
                 <div className="flex flex-col">
-                    <Logo width="170" height="65" src={LogoImage} alt="acceleratewb-logo-image"/>
+                    <Logo />
                     <div className="lg:max-w-sm">Aici pentru a-ti duce afacerea la un alt nivel prin intermediul onlineului</div>
                 </div>
                     <div className="flex flex-col space-x-0 ml-0 md:flex-row md:justify-between lg:space-x-16 lg:ml-16">

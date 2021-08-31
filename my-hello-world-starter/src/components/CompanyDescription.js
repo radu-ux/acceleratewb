@@ -1,27 +1,12 @@
 import React, { useEffect } from 'react'
-import { H2 } from '../components/common/SharedComponents';
-import TeamWorkImg500 from '../images/team-work-cropped-500.png';
-import TeamWorkImg1000 from '../images/team-work-cropped-1000_v1.png';
+import { H2 } from '../components/common/SharedComponents'; 
 import styled from 'styled-components';
 import { GrPhone } from "react-icons/gr";
 import AOS from 'aos'
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"; 
 
 const colors = require('tailwindcss/colors')
-
-const Wrapper = styled.div`   
-    img {
-        border-radius: 50%;
-        @media (min-width: 1024px) {
-            width: 480px;
-            height: 400px;
-        }
-
-        @media (min-width: 1536px) { 
-            width: 650px;
-            height: 500px;
-        }
-    }
-`;
 
 const PhoneIconWrapper = styled.div`
     .gr-icon path {
@@ -35,7 +20,7 @@ const PhoneIcon = () => {
             <GrPhone size="30px" className="gr-icon mt-2"/>
         </PhoneIconWrapper>  
     );
-}
+};
 
 const CompanyDescription = () => {
     useEffect(() => {
@@ -44,10 +29,24 @@ const CompanyDescription = () => {
         })
     }, []);
 
+    const teamWorkImageProperties = useStaticQuery(graphql`
+        query TeamWorkImgQuery {
+            file(relativePath: {eq: "team-work-cropped-1000_v1.png"}) {
+            id
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+            }
+        }   
+      `
+    )
+
     return (
         <section className="flex flex-col mt-20">
             <div className="flex flex-col md:flex-row justify-center my-10">
-                <div className="flex flex-col self-center mb-12 md:mb-32 2xl:mr-12">
+                <div className="flex flex-col self-center mb-12 2xl:mr-12">
                     <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
                         Politica companiei
                     </p>
@@ -65,16 +64,9 @@ const CompanyDescription = () => {
                         </div>
                     </div>
                 </div>
-                <Wrapper data-aos="zoom-in" className="self-center mx-5 sm:mx-0">
-                   <img width="500"
-                        height="500"
-                        src={TeamWorkImg500}
-                        srcset={
-                                `${TeamWorkImg500} 500w,
-                                 ${TeamWorkImg1000} 1000w`
-                               }
-                        sizes="(min-width: 600px) 50vw, 100vw" />        
-                </Wrapper>  
+                <div data-aos="zoom-in" className="self-center md:mx-0 w-11/12 sm:max-w-lg 2xl:max-w-2xl">
+                    <Img fluid={teamWorkImageProperties.file.childImageSharp.fluid} /> 
+                </div>
             </div>
         </section>
     )

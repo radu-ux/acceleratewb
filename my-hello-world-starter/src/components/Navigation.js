@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
-import LogoImage from '../images/acceleratewb.png';
+import Logo from '../components/Logo';
 
 const NavButton = ({text, _ref, _class}) => {
     return (
@@ -84,29 +84,12 @@ const Wrapper = styled.div`
     }
 `;
 
-const Logo = styled.img`
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    width: 170px;
-    height: 65px;
-
-    @media (min-width: 300px) {
-        width: 150px;
-        height: 60px;
-    }
-
-    @media (min-width: 768px) {
-        width: 170px;
-        height: 65px;
-    }
-`;
-
 const Navigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
         <header className="fixed top-0 z-50 bg-white flex flex-row justify-between shadow-xl w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
-            <Logo width="170" height="65" src={LogoImage} alt="acceleratewb-logo-image"/>
+            <Logo />
             <Wrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>
                     <div />
