@@ -6,12 +6,17 @@ import CompanyDescription from "../components/CompanyDescription";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 import Separator from "../components/Separator";
+import styled from "styled-components";
 import './tailwind.css';
 import "aos/dist/aos.css";
 
+const HomePageBody = styled.div`
+  font-family: 'Baloo Chettan 2';
+`;
+
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <HomePageBody className="overflow-hidden">
       <Navigation />
       <HeroSection />
       <CompanyDescription />
@@ -19,6 +24,6 @@ export default function Home() {
       <Separator />
       <Technologies />
       <Footer />
-    </div>
+    </HomePageBody>
   )
 } 

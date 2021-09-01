@@ -16,6 +16,10 @@ const HeroSectionChild = styled.div`
     min-height: 100vh;
 `;
 
+const HeroSectionTitle = styled.h1`
+    font-family: 'Rampart One';
+`;
+
 const HeroButton = () => {
     return (
         <button className="text-lg bg-blue-500 px-5 rounded-full text-white mr-10 shadow-lg hover:bg-blue-700">Contactează-ne</button>
@@ -40,9 +44,9 @@ const HeroSection = () =>  {
     return (
         <HeroSectionParent fluid={heroImgProperties.file.childImageSharp.fluid}>
             <HeroSectionChild className="flex flex-col mx-auto justify-center">
-                <h1 className="font-custom font-bold text-center text-white tracking-wider text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
+                <HeroSectionTitle className="font-custom font-bold text-center text-white tracking-wider text-4xl sm:text-5xl md:text-4xl lg:text-7xl 2xl:text-8xl">
                     Dezvoltam Solutii Web <span className="block text-center"> Smart <span className="text-yellow-500">&</span> Eficiente</span>
-                </h1>
+                </HeroSectionTitle>
                 <div className="flex flex-row mx-auto mt-10">
                     <HeroButton />
                     <div>
