@@ -1,26 +1,40 @@
 import React, { useEffect } from 'react'
-import { H2 } from '../components/common/SharedComponents'; 
 import styled from 'styled-components';
 import { GrPhone } from "react-icons/gr";
 import AOS from 'aos'
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"; 
+import Waves from '../images/waves-large-screen.svg';
+import WavesMobile from '../images/waves-mobile.svg';
+import WavesLaptop from '../images/waves-laptop.svg';
 
 const colors = require('tailwindcss/colors')
 
-const PhoneIconWrapper = styled.div`
+const PhoneIconWrapper = styled.p`
     .gr-icon path {
         stroke: ${({iconColor}) => iconColor};
+        display: inline;
     }
 `;
 
-const PhoneIcon = () => {
-    return (
-        <PhoneIconWrapper iconColor={colors.red[500]}>
-            <GrPhone size="30px" className="gr-icon mt-2"/>
-        </PhoneIconWrapper>  
-    );
-};
+const StyledSection = styled.section`
+        height: 100vh;
+        background: url(${WavesMobile}) center ;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media(max-width: 480px) {
+            background: url(${WavesMobile}) center ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @media(min-width: 769px) {
+            background: url(${Waves}) center ;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+`;
 
 const CompanyDescription = () => {
     useEffect(() => {
@@ -29,9 +43,9 @@ const CompanyDescription = () => {
         })
     }, []);
 
-    const teamWorkImageProperties = useStaticQuery(graphql`
-        query TeamWorkImgQuery {
-            file(relativePath: {eq: "team-work-cropped-1000_v1.png"}) {
+    const heroImageProperties = useStaticQuery(graphql`
+        query HeroImgQuery1 {
+            file(relativePath: {eq: "hero-img.png"}) {
             id
             childImageSharp {
                 fluid {
@@ -43,32 +57,30 @@ const CompanyDescription = () => {
       `
     )
 
+    const ContactButton = () => {
+        return (
+            <button className="text-lg bg-white px-5 py-3 rounded-full text-black font-bold shadow-lg transition duration-150 ease-in-out transform hover:-translate-y-1">Hai sa discutam!</button>
+        );
+    }
+
     return (
-        <section className="flex flex-col mt-20">
-            <div className="flex flex-col md:flex-row justify-center my-10">
-                <div className="flex flex-col self-center mb-12 2xl:mr-12">
-                    <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
-                        Politica companiei
-                    </p>
-                    <H2 animationType="fade-right" animationDuration="1000" isCentered={true}>Cine suntem ?</H2>
-                    <p className="leading-10 text-xl text-gray-500 mx-5 mt-5 sm:max-w-xl 2xl:max-w-2xl">
-                        Suntem o companie care se ocupă cu dezvoltarea de soluții web pentru afacerea ta.
-                        Dispunem de o echipă flexibilă, capabilă de a-ți ajuta compania să-și crească 
-                        veniturile prin intermediul online-ului.
-                    </p>
-                    <div className="flex flex-col mt-5 md:flex-row">
-                        <button className="text-lg bg-yellow-500 py-2 w-40 mt-8 text-white border-2 ring ring-yellow-500 shadow-lg mx-auto hover:bg-yellow-400 md:ml-5 md:mx-0">Cere oferta</button>
-                        <div className="flex flex-row mt-9 md:ml-8 self-center">
-                            <PhoneIcon/>
-                            <p className="ml-0 text-xs text-red-500 font-bold">SAU INTREABA ORICE LA <span className="block text-center text-lg">0765.654.343</span></p>
-                        </div>
+        <StyledSection className="flex flex-col pt-20 bg-regal-blue">
+            <div className="flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 md:justify-around md:mt-10 2xl:mt-28 md:space-x-10 md:mx-8 lg:mx-8 xl:mx-10 2xl:mx-32">
+               <div className="flex flex-col max-w-4xl mt-5 space-y-5 mx-5 md:mx-0 md:self-start lg:space-y-10">
+                   <h1 className="font-bold text-white md:text-4xl text-3xl lg:text-5xl xl:text-5xl 2xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
+                   <div className="text-white xl:max-w-lg 2xl:max-w-2xl md:text-lg xl:text-xl 2xl:text-2xl space-y-5">
+                        <p>Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
+                        <p> <span className="text-3xl 2xl:text-4xl font-bold">!</span> Nu ezita sa ne contactezi pentru orice intrebare</p>
                     </div>
-                </div>
-                <div data-aos="zoom-in" className="self-center md:mx-0 w-11/12 sm:max-w-lg 2xl:max-w-2xl">
-                    <Img fluid={teamWorkImageProperties.file.childImageSharp.fluid} /> 
+                   <div className="flex flex-row space-x-5 self-center ">
+                        <ContactButton/>
+                    </div>
+               </div>
+               <div className="w-10/12 sm:w-8/12 lg:w-full xl:w-11/12 shadow-xl">
+                    <Img fluid={heroImageProperties.file.childImageSharp.fluid} /> 
                 </div>
             </div>
-        </section>
+        </StyledSection>
     )
 }
 

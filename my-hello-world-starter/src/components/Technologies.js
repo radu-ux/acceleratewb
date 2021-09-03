@@ -40,7 +40,7 @@ const Technologies = () => {
 
     return (
         <section>
-            <div className="flex flex-row justify-center text-md mt-12 mb-4 sm:text-xl text-blue-500 font-bold tracking-widest">Stackul de technologii</div>
+            <div className="flex flex-row justify-center text-md sm:text-xl text-blue-500 font-bold tracking-widest">Stackul de technologii</div>
             <div>
                 <H2 animationType="fade-right" animationDuration="1000" isCentered={false}>Solutii pentru afacerea ta</H2>
                     <div className="flex flex-row mx-auto text-center text-lg mt-6 max-w-2xl text-gray-500">

@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../components/Logo';
-import Bubble from '../images/footer.svg';
+import Bubble from '../images/waves.svg';
 import { FooterLink } from './common/SharedComponents';
 
 const StyledFooter = styled.footer`
-        background: url(${Bubble}) center ;
-        background-size: cover;
-        background-repeat: no-repeat;
+    background-color: #3d72ea;
 `;
 
 const Footer = () => {

@@ -1,6 +1,5 @@
 import React from "react";
 import Navigation from "../components/Navigation";
-import HeroSection from "../components/HeroSection";
 import Services from "../components/Services";
 import CompanyDescription from "../components/CompanyDescription";
 import Technologies from "../components/Technologies";
@@ -18,11 +17,12 @@ export default function Home() {
   return (
     <HomePageBody className="overflow-hidden">
       <Navigation />
-      <HeroSection />
-      <CompanyDescription />
-      <Services />
-      <Separator />
-      <Technologies />
+      <div className="flex flex-col space-y-20">
+        <CompanyDescription />
+        <Services />
+        <Separator />
+        <Technologies />
+      </div>
       <Footer />
     </HomePageBody>
   )

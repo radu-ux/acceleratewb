@@ -88,7 +88,7 @@ const Navigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 z-50 bg-white flex flex-row justify-between shadow-xl w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
+        <header className="fixed top-0 z-50 bg-white shadow-lg flex flex-row justify-between w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
             <Logo />
             <Wrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>

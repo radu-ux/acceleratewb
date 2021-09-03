@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import SeparatorImage from '../images/footer.svg';
+import SeparatorImage from '../images/waves.svg';
 
 const StyledSeparator = styled.div`
-    background: url(${SeparatorImage}) center ;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #3d72ea;
 `;
 
 const ContactButton = () => {
@@ -16,8 +14,8 @@ const ContactButton = () => {
 
 const Separator = () =>{
     return (
-        <StyledSeparator className='my-12'>
-            <div className='flex flex-col space-y-5 py-5 mx-5 justify-around text-white md:flex-row md:space-y-0'>
+        <StyledSeparator>
+            <div className='flex flex-col space-y-5 py-5 mx-5 justify-around text-white md:flex-row md:space-y-0 2xl:justify-center 2xl:space-x-96'>
                 <div className='flex flex-col space-y-3'>
                     <p className='text-3xl font-bold'>
                        Care sunt avantajele de a lucra impreuna? 

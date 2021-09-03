@@ -3,11 +3,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
-    // extend: {
-    //   fontFamily: {
-    //     custom: ["anton", "sans-serif"]
-    //   }
-    // },
+    extend: {
+      colors: {
+        'regal-blue': "#0896FC"
+      }
+    }
   },
   variants: {
     extend: {},
