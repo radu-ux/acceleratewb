@@ -64,9 +64,8 @@ const CompanyDescription = () => {
     }
 
     return (
-        <StyledSection className="flex flex-col pt-20 bg-regal-blue">
-            <div className="flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 md:justify-around md:mt-10 2xl:mt-28 md:space-x-10 md:mx-8 lg:mx-8 xl:mx-10 2xl:mx-32">
-               <div className="flex flex-col max-w-4xl mt-5 space-y-5 mx-5 md:mx-0 md:self-start lg:space-y-10">
+         <StyledSection className="flex flex-col lg:flex-row items-center py-16 space-x-8 space-y-10 px-14 2xl:px-32 lg:space-y-0">
+               <div className="flex flex-col max-w-4xl mt-5 space-y-5 mx-5 self-center  md:mx-0 lg:space-y-10 xl:mt-10 2xl:mb-28">
                    <h1 className="font-bold text-white md:text-4xl text-3xl lg:text-5xl xl:text-5xl 2xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
                    <div className="text-white xl:max-w-lg 2xl:max-w-2xl md:text-lg xl:text-xl 2xl:text-2xl space-y-5">
                         <p>Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
@@ -79,8 +78,7 @@ const CompanyDescription = () => {
                <div className="w-10/12 sm:w-8/12 lg:w-full xl:w-11/12 shadow-xl">
                     <Img fluid={heroImageProperties.file.childImageSharp.fluid} /> 
                 </div>
-            </div>
-        </StyledSection>
+            </StyledSection>
     )
 }
 
