@@ -64,7 +64,7 @@ const CompanyDescription = () => {
     }
 
     return (
-         <StyledSection className="flex flex-col lg:flex-row items-center py-16 space-x-8 space-y-10 px-14 2xl:px-32 lg:space-y-0">
+         <StyledSection className="flex flex-col lg:flex-row items-center py-16 space-x-8 space-y-10 px-8 sm:px-14 2xl:px-32 lg:space-y-0">
                <div className="flex flex-col max-w-4xl mt-5 space-y-5 mx-5 self-center  md:mx-0 lg:space-y-10 xl:mt-10 2xl:mb-28">
                    <h1 className="font-bold text-white md:text-4xl text-3xl lg:text-5xl xl:text-5xl 2xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
                    <div className="text-white xl:max-w-lg 2xl:max-w-2xl md:text-lg xl:text-xl 2xl:text-2xl space-y-5">
