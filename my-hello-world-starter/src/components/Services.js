@@ -62,7 +62,7 @@ const Services = ()  =>{
     })
 
     return (
-        <section className="flex flex-col pt-12 md:pt-52 lg:pt-0">
+        <section className="flex flex-col">
             <p className="mx-auto my-5 text-md sm:text-xl text-blue-500 font-bold tracking-widest">
                 Aria de activitate în domeniul software
             </p>
