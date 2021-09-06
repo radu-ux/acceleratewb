@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       colors: {
         'regal-blue': "#0896FC"
+      }, 
+      screens: {
+        "3xl": "1600px"
       }
     }
   },
