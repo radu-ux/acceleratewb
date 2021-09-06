@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {MdWeb} from 'react-icons/md';
 import {IconContext} from "react-icons";
-import { H2, TechCard } from './common/SharedComponents';
+import { H2, TechCard } from '../common/SharedComponents';
 import AOS from 'aos';
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"; 
@@ -26,7 +26,7 @@ const Technologies = () => {
     }, []);
 
     const techStackImageProperties = useStaticQuery(graphql`
-    query TechStackImgQuery {
+        query TechStackImgQuery {
             file(relativePath: {eq: "tech-stack.jpg"}) {
             id
             childImageSharp {

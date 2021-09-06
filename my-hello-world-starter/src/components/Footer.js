@@ -1,12 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import Logo from '../components/Logo';
-import Bubble from '../images/waves.svg';
 import { FooterLink } from './common/SharedComponents';
+import { FooterWrapper } from './styled-components';
 
-const StyledFooter = styled.footer`
-    background-color: #3d72ea;
-`;
 
 const Footer = () => {
     const links = 
@@ -26,7 +22,7 @@ const Footer = () => {
         };
     
     return (
-        <StyledFooter className="flex flex-col mt-32 p-5">
+        <FooterWrapper className="flex flex-col mt-32 p-5">
             <div className="flex flex-col border-b pb-10 text-white lg:flex-row justify-around lg:mx-auto">
                 <div className="flex flex-col">
                     <Logo />
@@ -34,7 +30,7 @@ const Footer = () => {
                 </div>
                     <div className="flex flex-col space-x-0 ml-0 md:flex-row md:justify-between lg:space-x-16 lg:ml-16">
                         <FooterLink links={links.services}>Servicii</FooterLink>
-                        <FooterLink links={links.info}>|Informatii utile</FooterLink>
+                        <FooterLink links={links.info}>Informatii utile</FooterLink>
                         <div className="flex flex-col space-y-2 mt-20 lg:mt-0"> 
                             <p className="font-bold text-xl mb-5">Date contact</p>
                             <p>acceleratewb Business Center SRL</p>
@@ -47,7 +43,7 @@ const Footer = () => {
             <div className="mx-auto mt-5 text-white"> 
                 <p>Copyright @ 2021. Toate drepturile rezervate</p>
             </div>
-        </StyledFooter>
+        </FooterWrapper>
     )
 }
 

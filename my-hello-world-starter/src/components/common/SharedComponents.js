@@ -53,3 +53,11 @@ export const FooterLink = (props ) => {
         </div>
     );
 }
+
+export const ContactButton = ({children}) => {
+    return (
+        <button className="text-lg bg-white px-5 py-3 rounded-full text-black font-bold shadow-lg transition duration-150 ease-in-out transform hover:-translate-y-1">
+            {children}
+        </button>
+    );
+}

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+import { BurgerMenuIcon, MenuLinks, BurgerMenuWrapper } from './styled-components';
 import Logo from '../components/Logo';
 
 const NavButton = ({text, _ref, _class}) => {
@@ -8,89 +8,13 @@ const NavButton = ({text, _ref, _class}) => {
     );
 }
 
-const BurgerMenuIcon = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-self: center;
-    height: 1.5rem;
-    background: transparent;
-    cursor: pointer;
-    visibility: hidden;
-
-    div {
-        width: 1.5rem;
-        height: 0.2rem;
-        background: black;
-        transform-origin: 1px;
-        border-radius: 5px;
-        transition: opacity 300ms, transform 300ms;
-        
-        :first-child {
-            transform: ${({menuOpen}) => (menuOpen ? "rotate(45deg)" : "rotate(0)")};
-        }
-
-        :nth-child(2) {
-            opacity: ${({menuOpen}) => (menuOpen ? "0" : "1")};
-        }
-
-        :nth-child(3) {
-            transform: ${({menuOpen}) => (menuOpen ? "rotate(-45deg)" : "rotate(0)")};
-        }
-    }
-`;
-
-const MenuLinks = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 35vh;
-    top: 45px;
-    right: 0;
-    position: absolute;
-    background: white;
-    
-    transition: opacity 300ms;
-    opacity: ${({menuOpen}) => (menuOpen ? "1" : "0")};
-    visibility: ${({menuOpen}) => (menuOpen ? "visible" : "hidden")};
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-        opacity: 1;
-        visibility: visible;
-        position: relative;
-        background: transparent;
-        height: inherit;
-        top: 0;
-
-    }
-`;
-
-const Wrapper = styled.div`
-    display: flex;
-
-    @media (min-width: 300px) {
-        #burger-menu {
-            visibility: visible;
-        }
-    }
-
-    @media (min-width: 768px) {
-        #burger-menu {
-            visibility: hidden;
-        }
-    }
-`;
-
 const Navigation = () => {
     const [open, setOpen] = useState(false);
 
     return (
         <header className="fixed top-0 z-50 bg-white shadow-lg flex flex-row justify-between w-full px-5 sm:px-10 md:px-20 lg:px-36 xl:px-40 2xl:px-80">
             <Logo />
-            <Wrapper>
+            <BurgerMenuWrapper>
                 <BurgerMenuIcon id="burger-menu" menuOpen={open} onClick={() => setOpen(!open)}>
                     <div />
                     <div />
@@ -102,7 +26,7 @@ const Navigation = () => {
                     <NavButton text="Servicii" _ref="#" _class="sm:mr-0 md:mr-8"/>
                     <NavButton text="Contact" _ref="#" />
                 </MenuLinks>
-            </Wrapper>
+            </BurgerMenuWrapper>
         </header>
     )
 }

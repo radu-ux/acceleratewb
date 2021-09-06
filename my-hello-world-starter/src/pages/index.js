@@ -1,29 +1,22 @@
 import React from "react";
-import Navigation from "../components/Navigation";
-import Services from "../components/Services";
-import CompanyDescription from "../components/CompanyDescription";
-import Technologies from "../components/Technologies";
-import Footer from "../components/Footer";
-import Separator from "../components/Separator";
-import styled from "styled-components";
+import Services from "../components/index-page-components/Services";
+import CompanyDescription from "../components/index-page-components/CompanyDescription";
+import Technologies from "../components/index-page-components/Technologies";
+import Separator from "../components/index-page-components/Separator";
+import Layout from "../components/Layout";
+import IndexPageLayout from "../components/index-page-components/IndexPageLayout";
 import './tailwind.css';
 import "aos/dist/aos.css";
 
-const HomePageBody = styled.div`
-  font-family: 'Baloo Chettan 2';
-`;
-
 export default function Home() {
   return (
-    <HomePageBody className="overflow-hidden">
-      <Navigation />
-      <div className="flex flex-col space-y-20">
+    <Layout>
+      <IndexPageLayout>
         <CompanyDescription />
         <Services />
         <Separator />
         <Technologies />
-      </div>
-      <Footer />
-    </HomePageBody>
+      </IndexPageLayout>
+    </Layout>
   )
 } 

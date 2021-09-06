@@ -4,7 +4,7 @@ import {MdPhoneIphone} from 'react-icons/md';
 import {IconContext} from "react-icons";
 import {GiDigitalTrace} from "react-icons/gi";
 import { GrHostMaintenance } from "react-icons/gr";
-import { H2, Card } from './common/SharedComponents';
+import { H2, Card } from '../common/SharedComponents';
 import styled from "styled-components";
 import AOS from 'aos';
 
