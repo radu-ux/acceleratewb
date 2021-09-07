@@ -3,24 +3,10 @@ import styled from 'styled-components';
 // Component used to handle the hero section background
 export const HeroSection = styled.section`
     min-height: 100vh;
-    background: url(${({ mobileBgImage }) => mobileBgImage}) ;
+    background: url(${({ largeScreenBgImage }) => largeScreenBgImage}) ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-    @media(max-width: 480px) {
-        background: url(${({ mobileBgImage }) => mobileBgImage}) ;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    @media(min-width: 769px) {
-        background: url(${({ largeScreenBgImage }) => largeScreenBgImage}) ;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
 `;
 
 // Component used to set the bg color of the footer

@@ -16,7 +16,7 @@ const CompanyDescription = () => {
 
     const heroImageProperties = useStaticQuery(graphql`
         query HeroImagesQuery {
-            first: file(relativePath: {eq: "hero-img.png"}) {
+            xlSize: file(relativePath: {eq: "hero-img.png"}) {
                 id
                 childImageSharp {
                     fluid {
@@ -25,43 +25,34 @@ const CompanyDescription = () => {
                 }
             }
             
-            second: file(relativePath: {eq: "hero-img-2.png"}) {
-                id
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                        }
-                }
-            }   
+            
         }   
       `
     )
 
-    const firstImage = heroImageProperties.first.childImageSharp.fluid;
-    const secondImage = heroImageProperties.second.childImageSharp.fluid;
+    const heroImage = heroImageProperties.xlSize.childImageSharp.fluid;
 
     return (
-         <HeroSection mobileBgImage={WavesMobile} largeScreenBgImage={Waves}>
-             <div className="h-full flex flex-col lg:flex-row items-center py-20 lg:py-24 xl:py-18 2xl:py-32 3xl:py-44 lg:space-x-8 space-y-10 px-3 sm:px-14 2xl:px-28 3xl:px-32 lg:space-y-0">
-               <div className="flex flex-col sm:max-w-4xl mt-5 space-y-5 mx-5 self-center md:mx-0 lg:space-y-10 xl:mt-10 3xl:mb-28">
-                   <h1 className="font-bold text-white md:text-4xl text-3xl lg:text-5xl xl:text-5xl 3xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
-                   <div className="text-white xl:max-w-lg 2xl:max-w-2xl md:text-lg x2l:text-xl 2xl:text-2xl space-y-5">
-                        <p>Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
-                        <p> <span className="text-3xl 3xl:text-4xl font-bold">!</span> Nu ezita sa ne contactezi pentru orice intrebare</p>
+        <HeroSection mobileBgImage={WavesMobile} largeScreenBgImage={Waves} 
+                     className="grid lg:grid-cols-2 place-content-center gap-x-16 px-12 3xl:px-20">
+            <div className="flex flex-col justify-center">
+                <div className="self-center py-20 lg:py-0 text-white xl:max-w-2xl 3xl:max-w-3xl space-y-3 lg:space-y-3 xl:space-y-5 3xl:space-y-8">
+                    <h1 className="font-bold text-white text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
+                    <p className="md:text-lg xl:text-xl 2xl:text-2xl">Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
+                    <p> <span className="text-3xl 3xl:text-4xl font-bold">!</span> Nu ezita sa ne contactezi pentru orice intrebare</p>
+                    <div className="grid grid-rows-1">
+                        <div className="lg:mx-auto">
+                            <ContactButton> Hai sa discutam ! </ContactButton>
+                        </div>
                     </div>
-                   <div className="flex flex-row self-center">
-                        <ContactButton> Hai sa discutam ! </ContactButton>
-                    </div>
-               </div>
-               <div className="relative z-10 mx-auto w-10/12 sm:w-8/12 lg:w-full xl:w-11/12 shadow-2xl">
-                    <div 
-                        className="absolute z-0 shadow-xl transform -translate-y-8 lg:translate-x-8 xl:translate-x-20 2xl:translate-x-28 3xl:translate-x-32 bg-blue-500 w-10/12 sm:w-8/12 lg:w-full xl:w-11/12 h-10/12 sm:h-8/12 lg:h-full xl:h-11/12 invisible lg:visible"> 
-                    </div>
-                    <Img fluid={firstImage} className=""/> 
                 </div>
-               
-                </div>
-            </HeroSection>
+            </div>
+
+            <div className="relative z-0 sm:mx-auto sm:w-9/12 md:w-8/12 lg:w-full"> 
+                <Img fluid={heroImage} className="self-center shadow-xl"/> 
+            </div>
+                 
+        </HeroSection>
     )
 }
 
