@@ -34,9 +34,9 @@ const CompanyDescription = () => {
 
     return (
         <HeroSection mobileBgImage={WavesMobile} largeScreenBgImage={Waves} 
-                     className="grid lg:grid-cols-2 place-content-center gap-x-16 px-12 3xl:px-20">
-            <div className="flex flex-col justify-center">
-                <div className="self-center py-20 lg:py-0 text-white xl:max-w-2xl 3xl:max-w-3xl space-y-3 lg:space-y-3 xl:space-y-5 3xl:space-y-8">
+                     className="flex items-center justify-center">
+            <div className="flex flex-col py-20 lg:py-0 lg:flex-row mx-10 space-y-20 lg:space-y-0 lg:space-x-5">
+                <div className="flex flex-col justify-center text-white space-y-3 lg:space-y-3 xl:space-y-5 3xl:space-y-8">
                     <h1 className="font-bold text-white text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
                     <p className="md:text-lg xl:text-xl 2xl:text-2xl">Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
                     <p> <span className="text-3xl 3xl:text-4xl font-bold">!</span> Nu ezita sa ne contactezi pentru orice intrebare</p>
@@ -46,10 +46,10 @@ const CompanyDescription = () => {
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="relative z-0 sm:mx-auto sm:w-9/12 md:w-8/12 lg:w-full"> 
-                <Img fluid={heroImage} className="self-center shadow-xl"/> 
+                <div className="sm:mx-auto sm:w-9/12 md:w-8/12 lg:w-full 3xl:max-w-4xl"> 
+                    <Img fluid={heroImage} className="self-center shadow-xl"/> 
+                </div>
             </div>
                  
         </HeroSection>
