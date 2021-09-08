@@ -35,7 +35,7 @@ const CompanyDescription = () => {
     return (
         <HeroSection mobileBgImage={WavesMobile} largeScreenBgImage={Waves} 
                      className="flex items-center justify-center">
-            <div className="flex flex-col py-20 lg:py-0 lg:flex-row mx-10 space-y-20 lg:space-y-0 lg:space-x-5">
+            <div className="flex flex-col py-20 lg:py-0 lg:flex-row mx-16 space-y-20 lg:space-y-0 lg:space-x-5">
                 <div className="flex flex-col justify-center text-white space-y-3 lg:space-y-3 xl:space-y-5 3xl:space-y-8">
                     <h1 className="font-bold text-white text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl">Inovam afacerea ta prin websiteuri moderne si ultra rapide</h1>
                     <p className="md:text-lg xl:text-xl 2xl:text-2xl">Suntem o companie ce oferim solutii vaste pentru nevoile tale, de la siteuri de prezentare, la magazine online si chiar apliatii mobile</p>
@@ -47,8 +47,11 @@ const CompanyDescription = () => {
                     </div>
                 </div>
 
-                <div className="sm:mx-auto sm:w-9/12 md:w-8/12 lg:w-full 3xl:max-w-4xl"> 
-                    <Img fluid={heroImage} className="self-center shadow-xl"/> 
+                <div className="relative sm:mx-auto sm:w-9/12 md:w-8/12 lg:w-full 3xl:max-w-4xl"> 
+                    <div className="absolute z-20 w-full h-full rounded-2xl bg-blue-300 transform translate-x-4 -translate-y-3 shadow-xl" />
+                    <div className="absolute z-10 w-full h-full rounded-2xl bg-blue-400 transform translate-x-8 -translate-y-7 shadow-lg"/>
+                    <div className="absolute z-0 w-full h-full rounded-2xl bg-blue-500 transform translate-x-12 -translate-y-10 shadow-md"/>
+                    <Img fluid={heroImage} className="absolute rounded-2xl z-30 self-center shadow-xl"/> 
                 </div>
             </div>
                  
