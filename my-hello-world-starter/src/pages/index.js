@@ -1,22 +1,25 @@
-import React from "react";
-import Services from "../components/index-page-components/Services";
-import CompanyDescription from "../components/index-page-components/CompanyDescription";
-import Technologies from "../components/index-page-components/Technologies";
-import Separator from "../components/index-page-components/Separator";
-import Layout from "../components/Layout";
-import IndexPageLayout from "../components/index-page-components/IndexPageLayout";
-import './tailwind.css';
-import "aos/dist/aos.css";
+import React from 'react'
+import '../styles/index.css'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import Services from '../components/Services'
+import CallToAction from '../components/CallToAction'
+import Technologies from '../components/Technologies'
+import Testimonials from '../components/Testimonials'
 
 export default function Home() {
   return (
-    <Layout>
-      <IndexPageLayout>
-        <CompanyDescription />
-        <Services />
-        <Separator />
-        <Technologies />
-      </IndexPageLayout>
-    </Layout>
+    <>
+      <Header />
+      <Technologies />
+      <Main />
+      <Services />
+      <CallToAction />
+      <Testimonials />
+    </>
   )
-} 
+}
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

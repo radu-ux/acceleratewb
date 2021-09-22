@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+:root { 
+  --blue-50: #BFDBFE;
+  --blue-100: steelblue;
+  --blue-200: #2563EB;
+  --section-padding: 6rem 2rem;
+  --t-section-padding: 3.5rem 0 5rem 0;
+  --section-subtitle-color: gray;
+  --header_bg: rgba(0, 0, 0, 0.9);
+  --section-bg-gray: #f9fafb;
+}
+
+body {
+  margin: 0;
+  font-family: 'Baloo Chettan 2';
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}

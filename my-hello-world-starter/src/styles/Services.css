@@ -1,0 +1,169 @@
+.services_section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.5em;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    padding: var(--section-padding);
+}
+
+.section_title_container {
+    display: flex;
+    font-size: 1em;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.section_subtitle { 
+    text-transform: uppercase;
+    color: var(--section-subtitle-color);
+    font-size: 0.9em;
+    margin: 0 auto;
+}
+
+.section_title {
+    font-size: 1.8em;
+
+}
+
+.cards_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    font-size: 1em;
+    max-width: 30em;
+}
+
+.service_card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7em;
+    border-radius: 0.75rem;
+    padding: 1em;
+}
+
+.service_caption{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3em;
+}
+
+.service_title { 
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.service_description {
+    font-size: .9em;
+    text-align: center;
+}
+
+.service_icon_container { 
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+    background-color: var(--blue-50);
+    border-radius: 9999px;
+    padding: 0.6em;
+}
+
+.service_button {
+    margin: 0 auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--blue-200);
+    padding: 1em;
+    color: var(--blue-200);
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.service_button:hover {
+    color: white;
+    background-color: var(--blue-200);
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .section_title_container {
+        font-size: 1.3em;
+    }
+
+    .cards_container { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1.2em;
+        max-width: fit-content;
+    }
+    
+    .service_card {
+        text-align: start;
+        max-width: 20em;
+    }
+
+    .service_title {
+        text-align: start;
+    }
+
+    .service_description { 
+        text-align: start;
+    }
+
+    .service_icon_container {
+        margin: 0;;
+    }
+
+    .service_button {
+        margin: 0;
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width: 1440px) { 
+    .section_title_container {
+        font-size: 1.3em;
+    }
+    
+    .cards_container { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        font-size: 1.3em;
+        max-width: fit-content;
+    }
+
+    .service_card {
+        text-align: start;
+        max-width: 28rem;
+    }
+
+    .service_title { 
+        text-align: start;
+    }
+
+    .service_description { 
+        text-align: start;
+    }
+
+    .service_icon_container {
+        margin: 0;;
+    }
+
+    .service_button {
+        margin: 0;
+        width: fit-content;
+    }
+
+}

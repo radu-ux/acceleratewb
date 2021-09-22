@@ -1,0 +1,305 @@
+:root { 
+    --sm: '640px';
+    --md: '768px';
+    --lg: '1024px';
+    --xl: '1280';
+    --xl2: '1536px';
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header_bg);
+    font-size: 1.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+.show_header_bg { 
+    background-color: var(--header_bg);
+    transition: background-color 300ms ease;
+}
+
+.hide_header_bg { 
+    background-color: transparent;
+    transition: background-color 300ms ease 150ms;
+
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+.logo .web { 
+    color: whitesmoke;
+}
+
+.logo .elite { 
+    color: var(--blue-100);
+}
+
+.nav_toggle {
+    display: none;
+}
+
+.nav_toggle_label {
+    cursor: pointer;
+}
+
+.nav_toggle:checked ~ nav { 
+    transform: scale(1);
+}
+
+.nav_toggle:checked ~ nav a  {
+    opacity: 1;
+    transition: opacity 250ms ease 250ms
+}
+
+.nav_toggle_label span,
+.nav_toggle_label span::before,
+.nav_toggle_label span::after { 
+    display: block;
+    background: white;
+    width: 1.2em;
+    height: .15em;
+    margin-right: 1em;
+}
+
+.nav_toggle_label span::before,
+.nav_toggle_label span::after { 
+    position: relative;
+    content: ' ';
+}
+
+.nav_toggle_label span::before {
+    bottom: 0.3em;
+}
+
+.nav_toggle_label span::after {
+    top: 0.189em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--header_bg);
+    top: 100%;
+    width: 100%;
+    left: 0;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease;
+}
+
+.main_nav { 
+    display: flex;
+    flex-direction: column;
+    column-gap: 1.2em;
+    margin: 0;
+    padding: 1em 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav_link a {
+    text-decoration: none;
+    color: white;
+    opacity: 0;
+    transition: opacity 150ms ease;
+}
+
+.nav_link a::after {
+    display: block;
+    content: ' ';
+    border-bottom: .15em solid var(--blue-100);
+    visibility: hidden;
+    width: 100%;
+    transform: scaleX(0);
+    transition: all .2s ease-in-out;
+}
+
+.nav_link a:hover::after { 
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.hero_section { 
+    min-height: 100vh;
+    background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1400.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_section::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, .649);
+}
+
+.utility {
+    z-index: 10;
+}
+
+.hero_title { 
+    font-size: 8vmin;
+    color: white;
+    text-align: center;
+}
+
+.hero_text { 
+    color: #D1D5DB;
+    font-size: 4.2vmin;
+}
+
+.hero_button { 
+    text-decoration: none;
+    color: white;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    /* background-color: var(--blue-100); */
+    font-size: 1em;
+    margin-top: 3em;
+    padding: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.hero_button:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.hero_catch_word { 
+    color: var(--blue-100);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 200px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_200.jpg');
+    }
+}
+
+@media screen and (max-width: 463px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_463.jpg');
+    }
+}
+
+@media screen and (max-width: 654px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_645.jpg');
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_813.jpg');
+    }
+    .hide_header_bg { 
+        background-color: var(--header_bg);
+    }
+}
+
+@media screen and (max-width: 813px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_813.jpg');
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_813.jpg');
+    }
+    header {
+        background: transparent;
+        justify-content: space-around;
+    }
+
+    .hide_header_bg { 
+        background-color: transparent;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .nav_toggle_label {
+        display: none;
+    }
+
+    nav { 
+        transform: scale(1);
+        background-color: transparent;
+        position: relative;
+        width: initial;
+    }
+
+    .main_nav { 
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .nav_link a { 
+        opacity: 1;
+    }
+
+    .hero_button { 
+        font-size: 1.15em
+    }
+}
+
+@media screen and (max-width: 941px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_941.jpg');
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1074.jpg');
+    }
+}
+
+@media screen and (max-width: 1193px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1193.jpg');
+    }
+}
+
+@media screen and (max-width: 1314px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1314.jpg');
+    }
+}
+
+@media screen and (max-width: 1377px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1377.jpg');
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hero_section {
+        background-image: url('../images//hero-bg-img_a4hce5/hero-bg-img_1400.jpg');
+    }
+}
+
+
