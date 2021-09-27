@@ -6,6 +6,7 @@ import Services from '../components/Services'
 import CallToAction from '../components/CallToAction'
 import Technologies from '../components/Technologies'
 import Testimonials from '../components/Testimonials'
+import ContactUs from '../components/ContactUs'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Services />
       <CallToAction />
       <Testimonials />
+      <ContactUs />
     </>
   )
 }

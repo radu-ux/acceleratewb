@@ -67,7 +67,8 @@
 @media screen and (min-width: 768px) {
     .testimonial_cards_container { 
         display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr;
+        grid-template: 1fr / 1fr 1fr;
+        column-gap: 3em;
     }
 }
 
