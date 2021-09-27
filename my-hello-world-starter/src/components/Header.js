@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className={isHeaderIntersecting ? "hide_header_bg" : "show_header_bg"}>  
-        <h1 className="logo"><span className="web">WEB</span>-<span className="elite">ELITE</span></h1>
+        <h1 className="logo"><span className="web">WEB</span> <span className="elite">ELITE</span></h1>
         <input type="checkbox" id="nav-toggle" className="nav_toggle" />
         <nav>
           <ul className="main_nav">

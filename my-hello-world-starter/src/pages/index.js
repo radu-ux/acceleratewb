@@ -7,6 +7,7 @@ import CallToAction from '../components/CallToAction'
 import Technologies from '../components/Technologies'
 import Testimonials from '../components/Testimonials'
 import ContactUs from '../components/ContactUs'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <CallToAction />
       <Testimonials />
       <ContactUs />
+      <Footer />
     </>
   )
 }
