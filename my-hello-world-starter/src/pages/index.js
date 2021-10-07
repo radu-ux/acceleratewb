@@ -3,6 +3,7 @@ import '../styles/index.css'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Services from '../components/Services'
+import NewServices from '../components/NewServices'
 import CallToAction from '../components/CallToAction'
 import Technologies from '../components/Technologies'
 import Testimonials from '../components/Testimonials'
@@ -15,7 +16,7 @@ export default function Home() {
       <Header />
       <Technologies />
       <Main />
-      <Services />
+      <NewServices />
       <CallToAction />
       <Testimonials />
       <ContactUs />
